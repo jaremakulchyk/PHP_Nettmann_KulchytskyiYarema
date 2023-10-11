@@ -4,9 +4,15 @@ Datum: 2022-08-02
 Ersteller: Rommel
 /*
 
+
+
 /*Horizontale Linie blau hinterlegen*/
 hr {
 	border: 1px solid #0071BD;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /*Navigationsmenü*/
@@ -15,6 +21,8 @@ nav {
 	border-top: solid #0071BD;    		/* Rahmenlinie oben */
 	border-bottom: solid #0071BD; 		/* Rahmenlinie unten */
 	margin: 0;                        	/* Keinen Außenabstand */ 
+    display: flex;
+    justify-content: space-between;
 }
 
 nav li{
@@ -28,12 +36,12 @@ nav a{
   	padding: 4px 8px;              /* oben/unten 4px, re/li 8px */
 }
 
+
 .logo img{
-    height: 48px;
-    position: absolute;
-    top: 11px;
-    right: 40px;
+    max-height: 50px;
 }
+
+
 
 
 /* Tabelle formatieren */
@@ -41,6 +49,7 @@ nav a{
 /* Größe der Tabelle */
 table {
 	width:80%;	
+    margin: auto;
 }
 
 /* Tabellenrahmen*/
