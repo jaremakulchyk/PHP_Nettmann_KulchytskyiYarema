@@ -11,10 +11,6 @@ hr {
 	border: 1px solid #0071BD;
 }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-}
-
 /*Navigationsmenü*/
 nav {
 	background-color: lightgrey;       /* Hintergrundfarbe für die Navigation */ 
@@ -37,7 +33,7 @@ nav a{
 }
 
 
-.logo img{
+#logo img{
     max-height: 50px;
 }
 
@@ -47,33 +43,14 @@ nav a{
 /* Tabelle formatieren */
 /*---------------------*/
 /* Größe der Tabelle */
-table {
-	width:80%;	
+.table {
+    width: 80% !important;
     margin: auto;
 }
 
-/* Tabellenrahmen*/
-table, th, td {
-	border-collapse:collapse;
-	border: 1px solid black;
-}
-
-/* Hintergrund der Kopfzeile der Tabelle*/
-th {
-	background-color:lightgrey;
-	text-align:left;
-}
-
-h1,h2{
+h1,h2,h3{
     color: #0071BD;
 }
-
-/* Erste und 3te Zelle/Spalte rechtsbündig - Klasse in table-tag integrieren*/
-#tblZutrittsversuche  td:nth-child(1), 
-#tblZutrittsversuche  td:nth-child(3) {
-	text-align:right;	
-}
-
 
 /* Layout formatieren */
 /*---------------------*/
