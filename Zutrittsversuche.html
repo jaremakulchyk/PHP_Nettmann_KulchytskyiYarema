@@ -23,15 +23,19 @@
             <a href="#">Mietwagen</a>
           </li>
         </ul>
+        
       </nav>
-      <a href="google.com">
-        <img src="./img/logo_Nettmann.png" alt="Nettmann Logo">
-      </a>
+      <div class="logo">
+        <a href="google.com">
+          <img src="./img/logo_Nettmann.png" alt="Nettmann Logo">
+        </a>
+      </div>
+      
     </header>
     
     <h1>Zutrittsversuche</h1>
 
-    <table border="1">
+    <table id="tblZutrittsversuche">
       <thead>
         <tr>
           <th>ID</th>
@@ -49,7 +53,7 @@
           <td>3</td>
           <td>Schmidt</td>
           <td>Eingang Lager</td>
-          <td>Zutritt abgelehnt</td>
+          <td class="abgelehnt">Zutritt abgelehnt</td>
         </tr>
 
         <tr>
@@ -58,7 +62,7 @@
           <td>3</td>
           <td>Schmidt</td>
           <td>Eingang Lager</td>
-          <td>Zutritt abgelehnt</td>
+          <td class="abgelehnt">Zutritt abgelehnt</td>
         </tr>
 
         <tr>
@@ -67,7 +71,7 @@
           <td>1</td>
           <td>Nettmann</td>
           <td>Eingang Büro</td>
-          <td>Zutritt gestattet</td>
+          <td class="gestattet">Zutritt gestattet</td>
         </tr>
       </tbody>
     </table>
@@ -76,20 +80,25 @@
     
     <hr>
 
-    <h2>Kontakt</h2>
-
-    <ul>
-      <li>Ottostraße 22, 90762 Fürth</li>
-      <li>0911/11...</li>
-      <li>info@autohaus-nettmann.de</li>
-    </ul>
-
-    <h2>Bankdaten</h2>
-    <ul>
-      <li>IBAN: DE76 1231...</li>
-      <li>BIC: 123...</li>
-      <li>Institut: SuperBank</li>
-    </ul>
+    <footer class="row">
+      <div class="column">
+        <h2>Kontakt</h2>
+        <ul>
+          <li>Ottostraße 22, 90762 Fürth</li>
+          <li>0911/11...</li>
+          <li>info@autohaus-nettmann.de</li>
+        </ul>
+      </div>
+      <div class="column">
+        <h2>Bankdaten</h2>
+        <ul>
+          <li>IBAN: DE76 1231...</li>
+          <li>BIC: 123...</li>
+          <li>Institut: SuperBank</li>
+        </ul>
+      </div>
+    </footer>
+    
 
   </body>
 </html>
