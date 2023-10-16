@@ -11,16 +11,6 @@ hr {
 	border: 1px solid #0071BD;
 }
 
-/*Navigationsmenü*/
-nav {
-	background-color: lightgrey;       /* Hintergrundfarbe für die Navigation */ 
-	border-top: solid #0071BD;    		/* Rahmenlinie oben */
-	border-bottom: solid #0071BD; 		/* Rahmenlinie unten */
-	margin: 0;                        	/* Keinen Außenabstand */ 
-    display: flex;
-    justify-content: space-between;
-}
-
 nav li{
 	 display: inline;            /* Listenelemente nebeneinander */
  	 list-style-type: none;      /* Aufzählungszeichen entfernen */
@@ -43,14 +33,7 @@ nav a{
 /* Tabelle formatieren */
 /*---------------------*/
 /* Größe der Tabelle */
-.table {
-    width: 80% !important;
-    margin: auto;
-}
 
-h1,h2,h3{
-    color: #0071BD;
-}
 
 /* Layout formatieren */
 /*---------------------*/
