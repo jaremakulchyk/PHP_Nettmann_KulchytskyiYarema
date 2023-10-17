@@ -10,5 +10,13 @@
     width: 40px;
     border: 1px solid black;
     text-align: center;  
-    background-color: coral;  
+    background-color: rgb(232, 218, 30);  
+}
+
+.columnClass {
+    height: 40px;
+    width: 40px;
+    border: 1px solid black;
+    text-align: center;  
+    background-color: red;  
 }
