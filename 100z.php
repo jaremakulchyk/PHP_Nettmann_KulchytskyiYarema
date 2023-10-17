@@ -13,8 +13,42 @@
   <body>
     <table>
         <?php
+        class Cell 
+        {
+            public $number;
+
+            function setNumber($number)
+            {
+                $this->number = $number;
+            }
+
+            function getNumber()
+            {
+                return $this->number;
+            }
+
+            function isPrime()
+            {
+                $isPrime = true;
+                if($this->number == 1){
+                    $isPrime = false;
+                }
+                for($i = 2; $i <= $this->number; $i++)
+                {
+                    if(($this->number % $i == 0 && $i != $this->number))
+                    {
+                        //echo '<p>number:' .$number.', i:' .$i. '</p>';
+                        $isPrime = false;
+                        break;
+                    }
+                    // printf("<script>console.log('test')</script>");
+                }
+                return $isPrime;
+            }
+        }
+
+
         $matrix = [];
-        $zahl = 1;
         
         for($i = 0; $i < 10; $i++)
         {
@@ -22,8 +56,9 @@
             echo "<tr>";
             for($j = 0; $j < 10; $j ++)
             {
-                $matrix[i][j] = ($i * 10) + $j + 1;
-                if(isPrime($matrix[i][j]))
+                $matrix[$i][$j] = new Cell();
+                $matrix[$i][$j]->setNumber(($i * 10) + $j + 1);
+                if($matrix[$i][$j]->isPrime())
                 {
                     $class = "primeClass";
                 }
@@ -32,7 +67,7 @@
                     $class = "cell";
                 }
                 echo '<td class="'.$class.'">'
-                .$matrix[i][j].
+                .$matrix[$i][$j]->getNumber().
                 '</td>';
             }
             echo "</tr>";
@@ -40,24 +75,6 @@
 
         }
 
-        function isPrime($number)
-        {
-            $isPrime = true;
-            if($number == 1){
-                $isPrime = false;
-            }
-            for($i = 2; $i <= $number; $i++)
-            {
-                if(($number % $i == 0 && $i != $number) || $number == 1)
-                {
-                    //echo '<p>number:' .$number.', i:' .$i. '</p>';
-                    $isPrime = false;
-                    break;
-                }
-                // printf("<script>console.log('test')</script>");
-            }
-            return $isPrime;
-        }
         ?>
     </table>
   </body>
