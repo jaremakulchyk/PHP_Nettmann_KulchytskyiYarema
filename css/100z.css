@@ -10,13 +10,41 @@
     width: 40px;
     border: 1px solid black;
     text-align: center;  
-    background-color: rgb(232, 218, 30);  
+    background-color: #A5FFD6;  
 }
 
-.columnClass {
+.test {
+    border: 1px solid black;
+    text-align: center;  
+    background-color: #FF686B; 
+}
+
+.top {
+    border-bottom: 1px solid #FF686B;
+    text-align: center;  
+    background-color: #FF686B;  
+}
+
+.middle {
+    border-top: 1px solid #FF686B;
+    border-bottom: 1px solid #FF686B;
+    text-align: center;  
+    background-color: #FF686B;  
+}
+
+.bottom {
+    border-top: 1px solid #FF686B;
+    text-align: center;  
+    background-color: #FF686B;  
+}
+
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+td {
     height: 40px;
     width: 40px;
     border: 1px solid black;
-    text-align: center;  
-    background-color: red;  
+    text-align: center; 
 }

@@ -40,8 +40,6 @@
             }
 
         }
-
-
         $matrix = initializeMatrix();
 
         for($i = 0; $i < 10; $i++)
@@ -49,40 +47,35 @@
             echo "<tr>";
             for($j = 0; $j < 10; $j++)
             {
-
-                if($matrix[$i][$j]->isPrime && !$matrix[$i][$j]->isPartOfColumn)
-                    {
-                        if($matrix[$i + 1][$j]->isPrime)
-                        {
-                            $matrix[$i][$j]->setIsPartOfColumn(true);
-                            $matrix[$i + 1][$j]->setIsPartOfColumn(true);
-                            if($matrix[$i + 2][$j]->isPrime)
-                            {
-                                $matrix[$i + 2][$j]->setIsPartOfColumn(true);
-                            }
-                        }
-                    }
-
-
-                if($matrix[$i][$j]->isPartOfColumn)
-                {
-                    $matrix[$i][$j]->class = "columnClass";
-                }
-                else if($matrix[$i][$j]->isPrime && !$matrix[$i][$j]->isPartOfColumn)
-                {
-                    $matrix[$i][$j]->class = "primeClass";
-                }
-                else
+                if (!$matrix[$i][$j]->isPrime && !$matrix[$i][$j]->isPartOfColumn )
                 {
                     $matrix[$i][$j]->class = "cell";
                 }
-                // echo '<p>number: ' .$matrix[$i][$j]->getNumber(). '</p>';
-                // echo '<p>part of column: ' .$matrix[$i][$j]->isPartOfColumn. '</p>';
-                // echo '<p>prime: ' .$matrix[$i][$j]->isPrime. '</p>';
-                // echo '<p>class: ' .$matrix[$i][$j]->class. '</p>';
-                // echo '<p>i: ' .$i. '</p>';
-                // echo '<p>j: ' .$j. '</p>';
+                elseif($matrix[$i][$j]->isPrime && !$matrix[$i][$j]->isPartOfColumn)
+                {
+                    if($i <= 8 & $matrix[$i + 1][$j]->isPrime)
+                    {
+                        $matrix[$i][$j]->setIsPartOfColumn(true);
+                        $matrix[$i + 1][$j]->setIsPartOfColumn(true);
+                        if($i <= 7 & $matrix[$i + 2][$j]->isPrime)
+                        {
+                            $matrix[$i + 2][$j]->setIsPartOfColumn(true);
 
+                            $matrix[$i][$j]->class = "top";
+                            $matrix[$i + 1][$j]->class = "middle";
+                            $matrix[$i + 2][$j]->class = "bottom";
+                        }
+                        else
+                        {
+                            $matrix[$i][$j]->class = "top";
+                            $matrix[$i + 1][$j]->class = "bottom";
+                        }
+                    }
+                    else
+                    {
+                        $matrix[$i][$j]->class = "primeClass";
+                    }
+                }
 
                 echo '<td class="'.$matrix[$i][$j]->class.'">'
                 .$matrix[$i][$j]->getNumber().
@@ -103,11 +96,9 @@
                 {
                     if(($number % $i == 0 && $i != $number))
                     {
-                        //echo '<p>number:' .$number.', i:' .$i. '</p>';
                         $isPrime = false;
                         break;
                     }
-                    // printf("<script>console.log('test')</script>");
                 }
                 return $isPrime;
             }
